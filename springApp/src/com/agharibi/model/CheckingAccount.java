@@ -17,4 +17,12 @@ public class CheckingAccount implements Account {
     public void setCard(Card card) {
         this.card = card;
     }
+
+    public void onInit() {
+        System.out.println("OnInit method in CheckingAccount has been invoked");
+    }
+
+    public void onDestroy() {
+        System.out.println("OnDestroy method in CheckingAccount has been invoked");
+    }
 }

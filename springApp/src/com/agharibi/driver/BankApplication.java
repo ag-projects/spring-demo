@@ -20,5 +20,8 @@ public class BankApplication {
         // Account checking = new CheckingAccount();
         System.out.println(checking.createAccount());
         System.out.println(checking.cardDetails());
+
+        // shutting down the spring container
+        contextChecking.close();
     }
 }
