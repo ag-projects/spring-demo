@@ -1,6 +1,9 @@
 package com.agharibi.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class CheckingAccount implements Account {
+
 
     private Card card;
 
@@ -13,7 +16,8 @@ public class CheckingAccount implements Account {
     public String cardDetails() {
         return card.cardDetails();
     }
-
+    
+    @Autowired
     public void setCard(Card card) {
         this.card = card;
     }
