@@ -4,13 +4,20 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
+    <bean id="myCard"
+          class="com.agharibi.model.ATMCard" >
+
+    </bean>
+
     <bean id="mySavings"
           class="com.agharibi.model.SavingsAccount">
 
+        <constructor-arg ref="myCard"/>
     </bean>
 
     <bean id="myChecking"
           class="com.agharibi.model.CheckingAccount">
 
+        <constructor-arg ref="myCard"/>
     </bean>
 </beans>

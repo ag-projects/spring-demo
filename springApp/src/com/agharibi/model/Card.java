@@ -1,7 +1,6 @@
 package com.agharibi.model;
 
-public interface Account {
+public interface Card {
 
-    String createAccount();
     String cardDetails();
 }
