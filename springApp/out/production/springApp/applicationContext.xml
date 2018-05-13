@@ -16,8 +16,9 @@
     </bean>
 
     <bean id="myChecking"
-          class="com.agharibi.model.CheckingAccount">
-        <property name="card" ref="myCard" />
+          class="com.agharibi.model.CheckingAccount"
+            autowire="byType">
+        <!--<property name="card" ref="myCard" />-->
 
     </bean>
 </beans>
