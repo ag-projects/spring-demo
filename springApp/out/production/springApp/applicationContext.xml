@@ -17,7 +17,7 @@
 
     <bean id="myChecking"
           class="com.agharibi.model.CheckingAccount">
+        <property name="card" ref="myCard" />
 
-        <constructor-arg ref="myCard"/>
     </bean>
 </beans>
