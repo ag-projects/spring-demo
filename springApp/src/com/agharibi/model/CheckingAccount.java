@@ -16,7 +16,7 @@ public class CheckingAccount implements Account {
     public String cardDetails() {
         return card.cardDetails();
     }
-    
+
     @Autowired
     public void setCard(Card card) {
         this.card = card;
