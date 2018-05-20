@@ -27,7 +27,6 @@ public class AccountController {
 	
 	@RequestMapping("/showAccount")
 	public String showAccount() {
-		return "showAccount";
 	}
 
 	@RequestMapping(value="/saveAccount", method=RequestMethod.POST)

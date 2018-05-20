@@ -31,8 +31,22 @@ public class AccountController {
 	}
 
 	@RequestMapping(value="/saveAccount", method=RequestMethod.POST)
-	public String saveAccount(Model model, Account account) {	
+	public String saveAccount(Model model, 
+			@RequestParam("accountNo") String accountNo,
+			@RequestParam("accountHolderName") String accountHolderName,
+			@RequestParam("balance") String balance) {
+
+
+		
+		/**
+		 * Using Account object itself
+		 */
+		Account account = new Account();
+		account.setAccountNo(Integer.valueOf(accountNo));
+		account.setAccountHolderName(accountHolderName);
+		account.setBalance(Integer.valueOf(balance));
 		model.addAttribute("account", account);
+		
 		return "showAccount";
 	}
 }
