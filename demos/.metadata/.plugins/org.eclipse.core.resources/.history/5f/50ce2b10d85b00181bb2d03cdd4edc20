@@ -1,0 +1,12 @@
+package com.agharibi.controllers;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class AccountController {
+	
+	public String showHomePage() {
+		return "index";
+	}
+
+}
