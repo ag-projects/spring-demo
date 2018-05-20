@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.agharibi.model.Account;
 
-import jdk.nashorn.internal.ir.RuntimeNode.Request;
 
 @Controller
 public class AccountController {
@@ -20,7 +19,8 @@ public class AccountController {
 	}
 	
 	@RequestMapping("/new")
-	public String newAccount() {
+	public String newAccount(Model model) {
+		model.addAttribute("account", new Account());
 		return "newAccount";
 	}
 	
