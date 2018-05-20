@@ -9,9 +9,19 @@
 <body>
 	<h2>Account Details</h2>
 	
-	<p>Account Number: ${param.accountNo}</p>
+<%-- 	
+    <p>Account Number: ${param.accountNo}</p>
 	<p>Account Holder Name: ${param.accountHolderName}</p>
-	<p>Balance: ${param.balance}</p>
+	<p>Balance: ${param.balance}</p> 
+--%>
+
+<%-- 	<p>Account Number: ${accountNo}</p>
+	<p>Account Holder Name: ${accountHolderName}</p>
+	<p>Balance: ${balance}</p> --%>
 	
+	<p>Account Number: ${account.accountNo}</p>
+	<p>Account Holder Name: ${account.accountHolderName}</p>
+	<p>Balance: ${account.balance}</p>
+		
 </body>
 </html>

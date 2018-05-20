@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h2>Create New Account</h2>
-	<form action="showAccount" name="accountForm">
+	<form action="saveAccount" name="accountForm" method="post">
 		<table>
 			<tr>
 				<td>Account #: </td>

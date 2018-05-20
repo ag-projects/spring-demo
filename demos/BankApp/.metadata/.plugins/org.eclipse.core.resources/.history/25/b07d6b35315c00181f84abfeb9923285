@@ -1,0 +1,5 @@
+package com.agharibi.model;
+
+public class Account {
+
+}

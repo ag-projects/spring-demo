@@ -1,0 +1,19 @@
+package com.agharibi.model;
+
+public class Account {
+	private Integer accountNo;
+	private String accountHolderName;
+	private Integer balance;
+	
+	
+	
+	public Account(Integer accountNo, String accountHolderName, Integer balance) {
+		super();
+		this.accountNo = accountNo;
+		this.accountHolderName = accountHolderName;
+		this.balance = balance;
+	}
+	
+	
+	
+}
