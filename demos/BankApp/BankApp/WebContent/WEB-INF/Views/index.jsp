@@ -4,9 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>BankApp</title>
 </head>
 <body>
 	<h2>Bank Application Home Page</h2>
+	
+	<a href="new">Create New Account</a>
 </body>
 </html>

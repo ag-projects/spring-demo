@@ -10,5 +10,15 @@ public class AccountController {
 	public String showHomePage() {
 		return "index";
 	}
+	
+	@RequestMapping("/new")
+	public String newAccount() {
+		return "newAccount";
+	}
+	
+	@RequestMapping("/showAccount")
+	public String showAccount() {
+		return "showAccount";
+	}
 
 }
