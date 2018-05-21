@@ -1,0 +1,22 @@
+package com.agharibi.validations;
+
+import javax.validation.ConstraintValidator;
+import javax.validation.ConstraintValidatorContext;
+
+public class PSCodeConstraintValidator implements ConstraintValidator<PSCode, String>{
+
+	public String codePrefix;
+	
+	
+	
+	@Override
+	public void initialize(PSCode code) {
+		codePrefix = code.value();
+	}
+
+	@Override
+	public boolean isValid(String arg0, ConstraintValidatorContext arg1) {
+		return false;
+	}
+
+}

@@ -35,7 +35,7 @@ public class Account {
 	private Date dob;
 	
 	@NotNull(message="Code cannot be empty")
-	@PSCode(value="QA", message="Security code should be prefixed with QA")
+	@PSCode
 	private String code;
 	
 	public Account() {

@@ -10,8 +10,6 @@ import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import com.agharibi.validations.PSCode;
-
 public class Account {
 	
 	@NotNull(message="Account number cannt be empty")
@@ -35,7 +33,6 @@ public class Account {
 	private Date dob;
 	
 	@NotNull(message="Code cannot be empty")
-	@PSCode(value="QA", message="Security code should be prefixed with QA")
 	private String code;
 	
 	public Account() {

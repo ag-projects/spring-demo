@@ -4,3 +4,6 @@
 1526823173904	Extract local variable 'accountHolderName'
 1526823195437	Extract local variable 'balance'
 1526863933740	Extract local variable 'trimmer'
+1526864685694	Copy package
+1526864693322	Delete element
+1526864783092	Delete element
