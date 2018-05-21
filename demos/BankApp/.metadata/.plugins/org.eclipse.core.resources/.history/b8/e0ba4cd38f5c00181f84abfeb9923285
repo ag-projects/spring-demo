@@ -4,7 +4,6 @@ import java.util.Date;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
@@ -27,9 +26,8 @@ public class Account {
 	@NotNull(message="Account type cannot be empty")
 	private String accountType;
 	
-	@DateTimeFormat(pattern="MM/dd/yyyy")
+	@DateTimeFormat(pattern="MM/DD/YYYY")
 	@NotNull(message="Date of birth cannot be empty")
-	@Past(message="Date of birth cannot be in future")
 	private Date dob;
 	
 	@NotNull(message="Code cannot be empty")

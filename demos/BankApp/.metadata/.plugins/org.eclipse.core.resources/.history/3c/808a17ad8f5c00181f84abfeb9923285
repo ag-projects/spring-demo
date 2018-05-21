@@ -2,9 +2,7 @@ package com.agharibi.model;
 
 import java.util.Date;
 
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
@@ -21,15 +19,13 @@ public class Account {
 	private String accountHolderName;
 	
 	@NotNull(message="Balance cannot be emtpy")
-	@Min(value=500, message="Account balance cannot be less than $500")
 	private Integer balance;
 	
 	@NotNull(message="Account type cannot be empty")
 	private String accountType;
 	
-	@DateTimeFormat(pattern="MM/dd/yyyy")
+	@DateTimeFormat(pattern="MM/DD/YYYY")
 	@NotNull(message="Date of birth cannot be empty")
-	@Past(message="Date of birth cannot be in future")
 	private Date dob;
 	
 	@NotNull(message="Code cannot be empty")

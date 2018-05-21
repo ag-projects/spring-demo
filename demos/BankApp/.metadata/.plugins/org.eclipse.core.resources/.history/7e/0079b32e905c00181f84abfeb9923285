@@ -27,7 +27,7 @@ public class Account {
 	@NotNull(message="Account type cannot be empty")
 	private String accountType;
 	
-	@DateTimeFormat(pattern="MM/dd/yyyy")
+	@DateTimeFormat(pattern="MM/DD/YYYY")
 	@NotNull(message="Date of birth cannot be empty")
 	@Past(message="Date of birth cannot be in future")
 	private Date dob;
