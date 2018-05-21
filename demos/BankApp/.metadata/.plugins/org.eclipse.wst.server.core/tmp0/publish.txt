@@ -1,5 +1,5 @@
 #Tomcat publish data
-#Sun May 20 16:30:20 PDT 2018
+#Sun May 20 17:32:04 PDT 2018
 org.eclipse.jst.jee.server\:/binary\:/Users/Armen/dev/spring-demo/demos/BankApp/BankApp/WebContent/WEB-INF/lib/spring-web-5.0.6.RELEASE-sources.jar=/Users/Armen/tomcat9/wtpwebapps/BankApp/WEB-INF/lib/spring-web-5.0.6.RELEASE-sources.jar
 org.eclipse.jst.jee.server\:BankApp=/Users/Armen/tomcat9/wtpwebapps/BankApp
 org.eclipse.jst.jee.server\:/binary\:/Users/Armen/dev/spring-demo/demos/BankApp/BankApp/WebContent/WEB-INF/lib/spring-web-5.0.6.RELEASE.jar=/Users/Armen/tomcat9/wtpwebapps/BankApp/WEB-INF/lib/spring-web-5.0.6.RELEASE.jar

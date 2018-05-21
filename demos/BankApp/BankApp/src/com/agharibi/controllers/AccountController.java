@@ -1,9 +1,12 @@
 package com.agharibi.controllers;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -31,8 +34,11 @@ public class AccountController {
 	}
 
 	@RequestMapping(value="/saveAccount", method=RequestMethod.POST)
-	public String saveAccount(Model model, Account account) {	
-		model.addAttribute("account", account);
-		return "showAccount";
+	public String saveAccount(@Valid @ModelAttribute("account") Account account, BindingResult result) {	
+		if (result.hasErrors()) {
+			return "newAccount";
+		} else {
+			return "showAccount";
+		}
 	}
 }
