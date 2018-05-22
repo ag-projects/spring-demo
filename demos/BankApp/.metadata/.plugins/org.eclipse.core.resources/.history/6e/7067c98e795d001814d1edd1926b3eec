@@ -1,0 +1,5 @@
+package com.agharibi.entity;
+
+public class AccountEntity {
+
+}

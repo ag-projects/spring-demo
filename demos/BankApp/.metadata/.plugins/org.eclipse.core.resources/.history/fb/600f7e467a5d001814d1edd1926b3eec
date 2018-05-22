@@ -1,0 +1,71 @@
+package com.agharibi.entity;
+
+import java.util.Date;
+
+import javax.persistence.Table;
+
+@Table(name="account")
+public class AccountEntity {
+	
+	private Integer accountNo;
+	private String accountHolderName;
+	private Integer balance;
+	private String accountType;
+	private Date dob;
+	private String code;
+	
+	public AccountEntity() {
+		super();
+	}
+
+	public Integer getAccountNo() {
+		return accountNo;
+	}
+
+	public void setAccountNo(Integer accountNo) {
+		this.accountNo = accountNo;
+	}
+
+	public String getAccountHolderName() {
+		return accountHolderName;
+	}
+
+	public void setAccountHolderName(String accountHolderName) {
+		this.accountHolderName = accountHolderName;
+	}
+
+	public Integer getBalance() {
+		return balance;
+	}
+
+	public void setBalance(Integer balance) {
+		this.balance = balance;
+	}
+
+	public String getAccountType() {
+		return accountType;
+	}
+
+	public void setAccountType(String accountType) {
+		this.accountType = accountType;
+	}
+
+	public Date getDob() {
+		return dob;
+	}
+
+	public void setDob(Date dob) {
+		this.dob = dob;
+	}
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+	
+	
+
+}

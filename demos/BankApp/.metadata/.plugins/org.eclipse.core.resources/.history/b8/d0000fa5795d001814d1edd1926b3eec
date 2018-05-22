@@ -1,0 +1,14 @@
+package com.agharibi.entity;
+
+import java.util.Date;
+
+public class AccountEntity {
+	
+	private Integer accountNo;
+	private String accountHolderName;
+	private Integer balance;
+	private String accountType;
+	private Date dob;
+	private String code;
+
+}
