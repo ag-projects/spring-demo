@@ -54,6 +54,4 @@
     <bean id="myTransactionManager" class="org.springframework.com.hibernate5.HibernateTransactionManager">
     	<property name="sessionFactory" ref="sessionFactory" />
     </bean>
-    
-    <tx:annotation-driven transaction-manager="myTransactionManager" /> 
 </beans>
