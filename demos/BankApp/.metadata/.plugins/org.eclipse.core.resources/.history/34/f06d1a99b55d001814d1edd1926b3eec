@@ -1,0 +1,13 @@
+package com.agharibi.services;
+
+import com.agharibi.model.Account;
+
+public class AccountServiceImpl implements AccountService {
+
+	@Override
+	public boolean saveAccount(Account account) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

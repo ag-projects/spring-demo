@@ -39,9 +39,9 @@
     	<property name="user" value="root" />
     	<property name="password" value="root" />
     </bean>
-    
+                                <!-- org.springframework.orm.hibernate5.LocalSessionFactoryBean" -->
     <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
-    	<property name="datasource" ref="datasource" />
+    	<property name="dataSource" ref="dataSource" />
     	<property name="packagesToScan" value="com.agharibi" />
     	<property name="hibernateProperties">
     		<props>
@@ -50,10 +50,11 @@
     		</props>
     	</property>
     </bean>
-    
-    <bean id="myTransactionManager" class="org.springframework.com.hibernate5.HibernateTransactionManager">
-    	<property name="sessionFactory" ref="sessionFactory" />
-    </bean>
-    
-    <tx:annotation-driven transaction-manager="myTransactionManager" /> 
+                                    
+	<bean id="myTransactionManager"
+		class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<tx:annotation-driven transaction-manager="myTransactionManager" /> 
 </beans>

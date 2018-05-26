@@ -1,0 +1,5 @@
+package com.agharibi.daos;
+
+public interface AccountDao {
+
+}

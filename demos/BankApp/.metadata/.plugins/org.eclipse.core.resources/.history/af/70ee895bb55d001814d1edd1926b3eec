@@ -1,0 +1,5 @@
+package com.agharibi.services;
+
+public interface AccountService {
+
+}

@@ -1,0 +1,12 @@
+package com.agharibi.daos;
+
+import com.agharibi.model.Account;
+
+public class AccountDaoImp implements AccountDao {
+
+	@Override
+	public boolean saveAccount(Account account) {
+		return false;
+	}
+
+}

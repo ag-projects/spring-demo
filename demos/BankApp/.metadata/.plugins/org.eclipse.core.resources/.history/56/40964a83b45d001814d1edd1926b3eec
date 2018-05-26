@@ -1,0 +1,18 @@
+package com.agharibi.daos;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.agharibi.model.Account;
+
+public class AccountDaoImp implements AccountDao {
+
+	@Autowired
+	private SessionFactory sessionFactory;
+	
+	@Override
+	public boolean saveAccount(Account account) {
+		return false;
+	}
+
+}
