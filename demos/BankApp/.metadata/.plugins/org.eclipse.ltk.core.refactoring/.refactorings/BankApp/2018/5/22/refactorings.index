@@ -1,0 +1,4 @@
+1527438954587	Extract local variable 'session'
+1527439095720	Extract local variable 'query'
+1527439145746	Extract local variable 'accountList'
+1527440033869	Extract local variable 'accounts'

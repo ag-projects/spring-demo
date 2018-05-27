@@ -1,7 +1,11 @@
 package com.agharibi.daos;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -30,12 +34,61 @@ public class AccountDaoImp implements AccountDao {
 		
 		try {
 			Session session = sessionFactory.getCurrentSession();
-			session.save(entity);
+			session.saveOrUpdate(entity);
 			resultSaved = true;
 		} catch (Exception e) {
 			System.out.println(e.getStackTrace());		
 		}		
 		return resultSaved;
 	}
+
+	@Override
+	public List<Account> getAccounts() {
+		List<Account> accounts = new ArrayList<>();
+		
+		try {
+			Session session = sessionFactory.getCurrentSession();
+			Query<AccountEntity> query = session.createQuery("From AccountEntity", AccountEntity.class);
+			List<AccountEntity> accountList = query.getResultList();
+			
+			for(int i=0; i<accountList.size(); i++) {
+				AccountEntity accountEntity = (AccountEntity) accountList.get(i);
+				Account account = new Account();
+				account.setAccountNo(accountEntity.getAccountNo());
+				account.setAccountHolderName(accountEntity.getAccountHolderName());
+				
+				account.setAccountType(accountEntity.getAccountType());
+				account.setBalance(accountEntity.getBalance());
+				account.setDob(accountEntity.getDob());
+				account.setCode(accountEntity.getCode());
+				
+				accounts.add(account);
+			}
+		} catch (Exception e) {
+			e.getMessage();
+		}
+		return accounts;
+	}
+
+	@Override
+	public Account getAccount(Integer accountNo) {
+		Account account = new Account();
+		try {
+			Session session = sessionFactory.getCurrentSession();
+			AccountEntity accountEntity = (AccountEntity) session.load(AccountEntity.class, accountNo);
+			account.setAccountNo(accountEntity.getAccountNo());
+			account.setAccountHolderName(accountEntity.getAccountHolderName());
+			
+			account.setAccountType(accountEntity.getAccountType());
+			account.setBalance(accountEntity.getBalance());
+			account.setDob(accountEntity.getDob());
+			account.setCode(accountEntity.getCode());
+		} catch (Exception e) {
+			e.getMessage();
+		}
+		return account;
+	}
+	
+	
 
 }

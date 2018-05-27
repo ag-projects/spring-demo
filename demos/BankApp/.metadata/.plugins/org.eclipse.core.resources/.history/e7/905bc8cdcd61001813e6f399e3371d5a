@@ -1,0 +1,79 @@
+package com.agharibi.daos;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.agharibi.entity.AccountEntity;
+import com.agharibi.model.Account;
+
+@Repository
+public class AccountDaoImp implements AccountDao {
+
+	@Autowired
+	private SessionFactory sessionFactory;
+	
+	@Override
+	public boolean saveAccount(Account account) {
+		
+		boolean resultSaved = false;
+		
+		AccountEntity entity = new AccountEntity();
+		entity.setAccountNo(account.getAccountNo());
+		entity.setAccountHolderName(account.getAccountHolderName());
+		entity.setAccountType(account.getAccountType());
+		
+		entity.setBalance(account.getBalance());
+		entity.setCode(account.getCode());
+		entity.setDob(account.getDob());
+		
+		try {
+			Session session = sessionFactory.getCurrentSession();
+			session.save(entity);
+			resultSaved = true;
+		} catch (Exception e) {
+			System.out.println(e.getStackTrace());		
+		}		
+		return resultSaved;
+	}
+
+	@Override
+	public List<Account> getAccounts() {
+		List<Account> accounts = new ArrayList<>();
+		
+		try {
+			Session session = sessionFactory.getCurrentSession();
+			Query<AccountEntity> query = session.createQuery("From AccountEntity", AccountEntity.class);
+			List<AccountEntity> accountList = query.getResultList();
+			
+			for(int i=0; i<accountList.size(); i++) {
+				AccountEntity accountEntity = (AccountEntity) accountList.get(i);
+				Account account = new Account();
+				account.setAccountNo(accountEntity.getAccountNo());
+				account.setAccountHolderName(accountEntity.getAccountHolderName());
+				
+				account.setAccountType(accountEntity.getAccountType());
+				account.setBalance(accountEntity.getBalance());
+				account.setDob(accountEntity.getDob());
+				account.setCode(accountEntity.getCode());
+				
+				accounts.add(account);
+			}
+			
+			
+			
+		} catch (Exception e) {
+
+		}
+		
+		return null;
+	}
+	
+	
+
+}
