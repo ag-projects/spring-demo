@@ -2,3 +2,4 @@
 1527439095720	Extract local variable 'query'
 1527439145746	Extract local variable 'accountList'
 1527440033869	Extract local variable 'accounts'
+1527444596144	Rename resource 'accountList.jsp'
